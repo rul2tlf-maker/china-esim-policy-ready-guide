@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rul2tlf-maker.github.io/china-esim-policy-ready-guide/sitemap.xml
