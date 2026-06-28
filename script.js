@@ -3,39 +3,53 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 if (!reduceMotion && window.anime) {
   anime({
     targets: ".hero-copy > *",
-    translateY: [24, 0],
+    translateY: [28, 0],
     opacity: [0, 1],
     delay: anime.stagger(90),
-    duration: 860,
+    duration: 920,
     easing: "easeOutExpo"
   });
 
   anime({
-    targets: ".scan-beam",
-    translateX: ["-18%", "245%"],
-    duration: 2600,
+    targets: ".scan-lane-a",
+    translateX: ["-22%", "280%"],
+    duration: 3200,
     easing: "linear",
     loop: true
   });
 
   anime({
-    targets: [".frame-line-a", ".frame-line-b", ".frame-line-c"],
-    opacity: [0.25, 0.9],
-    scale: [0.985, 1.01],
-    direction: "alternate",
-    duration: 1800,
-    delay: anime.stagger(180),
-    loop: true,
-    easing: "easeInOutSine"
+    targets: ".scan-lane-b",
+    translateX: ["280%", "-18%"],
+    duration: 4200,
+    easing: "linear",
+    loop: true
   });
 
   anime({
-    targets: ".signal-pills li",
-    translateY: [14, 0],
+    targets: ".hero-pills li",
+    translateY: [16, 0],
     opacity: [0, 1],
     delay: anime.stagger(70, { start: 420 }),
-    duration: 640,
+    duration: 680,
     easing: "easeOutQuad"
+  });
+
+  anime({
+    targets: ".feed-row",
+    opacity: [0.35, 1],
+    translateX: [10, 0],
+    delay: anime.stagger(150, { start: 460 }),
+    duration: 760,
+    easing: "easeOutExpo"
+  });
+
+  anime({
+    targets: ".route-track span",
+    width: ["0%", "100%"],
+    duration: 1900,
+    delay: 900,
+    easing: "easeInOutQuart"
   });
 }
 
@@ -77,7 +91,7 @@ document.querySelectorAll(".count").forEach((node) => {
     targets: state,
     value: target,
     round: target % 1 === 0 ? 1 : 10,
-    duration: 1400,
+    duration: 1500,
     delay: 520,
     easing: "easeOutCubic",
     update: () => {
