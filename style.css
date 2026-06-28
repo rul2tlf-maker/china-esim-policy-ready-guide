@@ -1,8 +1,8 @@
 :root {
   color-scheme: dark;
   --bg: #071018;
-  --panel: rgba(11, 22, 37, 0.84);
-  --panel-soft: rgba(10, 18, 30, 0.72);
+  --panel: rgba(16, 31, 50, 0.92);
+  --panel-soft: rgba(13, 24, 39, 0.82);
   --line: rgba(98, 211, 255, 0.16);
   --line-strong: rgba(98, 211, 255, 0.34);
   --text: #eef7ff;
@@ -53,7 +53,7 @@ img { display: block; max-width: 100%; }
 }
 
 .brand { font-size: 14px; }
-.nav-links { display: flex; flex-wrap: wrap; gap: 18px; color: var(--muted); font-size: 14px; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 18px; color: #d6e7f6; font-size: 14px; }
 
 .hero-grid {
   display: grid;
@@ -68,6 +68,7 @@ h1, h2, h3, p { margin-top: 0; }
 h1 { font-size: clamp(2.6rem, 5vw, 4.8rem); line-height: 1.02; max-width: 11ch; margin-bottom: 20px; }
 h2 { font-size: clamp(2rem, 3.2vw, 3.2rem); line-height: 1.08; max-width: 15ch; }
 h3 { font-size: 1.18rem; margin-bottom: 12px; }
+h1, h2, h3, strong, summary, .brand, .card-tag, .timeline-date, .text-link { color: var(--text); }
 .lead,
 .feature-card p,
 .timeline-card p,
@@ -107,6 +108,7 @@ h3 { font-size: 1.18rem; margin-bottom: 12px; }
 .button-secondary {
   background: rgba(9, 15, 25, 0.72);
   border-color: var(--line-strong);
+  color: var(--text);
 }
 
 .hero-pills {
@@ -122,9 +124,39 @@ h3 { font-size: 1.18rem; margin-bottom: 12px; }
   border-radius: 999px;
   background: rgba(9, 16, 27, 0.74);
   border: 1px solid var(--line);
-  color: #d6f5ff;
+  color: #eef8ff;
   font-size: 14px;
 }
+
+.lead,
+.feature-card p,
+.timeline-card p,
+.stack-card p,
+.proof-card figcaption,
+.scene-card p,
+.route-step p,
+.faq-item p,
+.cta-panel p,
+.compliance,
+.feed-row span,
+.feed-row strong,
+.price-row span,
+.price-row strong,
+.nav-links a,
+.stack-list span,
+.stack-list strong,
+.stat-card span,
+.faq-item summary {
+  color: #d8e7f4;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+
+.lead { color: #e8f4fd; }
+.price-row strong,
+.stack-list strong,
+.feed-row strong,
+.faq-item summary,
+.text-link { color: #f2f9ff; }
 
 .command-board,
 .feature-card,
